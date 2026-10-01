@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle.Text" xml:space="preserve">
+    <value>Galería de Iconos Fluent System</value>
+  </data>
+  <data name="SearchBox.PlaceholderText" xml:space="preserve">
+    <value>Buscar icono...</value>
+  </data>
+  <data name="SettingsButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="CopyGlyphMenuItem.Text" xml:space="preserve">
+    <value>Copiar Código Glyph</value>
+  </data>
+  <data name="CopyFontIconMenuItem.Text" xml:space="preserve">
+    <value>Copiar Font Icon</value>
+  </data>
+  <data name="CopySvgMenuItem.Text" xml:space="preserve">
+    <value>Copiar Código SVG</value>
+  </data>
+  <data name="ExportSvgMenuItem.Text" xml:space="preserve">
+    <value>Exportar como archivo SVG...</value>
+  </data>
+  <data name="HeaderTitle.Text" xml:space="preserve">
+    <value>Fluent System Icons</value>
+  </data>
+  <data name="ToggleSidePanelButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mostrar/Ocultar panel de detalles</value>
+  </data>
+  <data name="SplashScreenTitle.Text" xml:space="preserve">
+    <value>Fluent System Icons Gallery</value>
+  </data>
+  <data name="SidePanel_InitialMessage.Text" xml:space="preserve">
+    <value>Selecciona un icono para ver sus detalles</value>
+  </data>
+  <data name="SidePanel_NameHeader.Text" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="SidePanel_GlyphTextHeader_Text" xml:space="preserve">
+    <value>Texto Glyph</value>
+  </data>
+  <data name="SidePanel_FontIconXamlHeader_Text" xml:space="preserve">
+    <value>Font Icon XAML</value>
+  </data>
+  <data name="SidePanel_FontIconCSharpHeader_Text" xml:space="preserve">
+    <value>Font Icon C#</value>
+  </data>
+  <data name="SidePanel_SymbolIconXamlHeader_Text" xml:space="preserve">
+    <value>Symbol Icon XAML</value>
+  </data>
+  <data name="SidePanel_SymbolIconCSharpHeader_Text" xml:space="preserve">
+    <value>Symbol Icon C#</value>
+  </data>
+  <data name="CopyNameButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Nombre</value>
+  </data>
+  <data name="SidePanel_CopyGlyphText.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Texto Glyph</value>
+  </data>
+  <data name="SidePanel_CopyGlyphCode.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Código Glyph</value>
+  </data>
+  <data name="SidePanel_CopyFontIconXaml.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Font Icon (XAML)</value>
+  </data>
+  <data name="SidePanel_CopyFontIconCSharp.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Font Icon (C#)</value>
+  </data>
+  <data name="SidePanel_CopySymbolIconXaml.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Symbol Icon (XAML)</value>
+  </data>
+  <data name="SidePanel_CopySymbolIconCSharp.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Copiar Symbol Icon (C#)</value>
+  </data>
+  <data name="SidePanel_Copied_Text" xml:space="preserve">
+    <value>¡Copiado!</value>
+  </data>
+  <data name="Settings_Appearance.Text" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="Settings_LanguageHeader.Header" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Settings_Language_System.Content" xml:space="preserve">
+    <value>Usar la configuración del sistema</value>
+    <comment>Language option</comment>
+  </data>
+  <data name="Settings_ThemeHeader.Header" xml:space="preserve">
+    <value>Tema de la aplicación</value>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>Oscuro</value>
+  </data>
+  <data name="Settings_Theme_System.Content" xml:space="preserve">
+    <value>Usar la configuración del sistema</value>
+    <comment>Theme option</comment>
+  </data>
+  <data name="Settings_BackdropHeader.Header" xml:space="preserve">
+    <value>Material de fondo (Backdrop)</value>
+  </data>
+  <data name="Settings_Backdrop_Mica.Content" xml:space="preserve">
+    <value>Mica (por defecto)</value>
+  </data>
+  <data name="Settings_Backdrop_MicaAlt.Content" xml:space="preserve">
+    <value>Mica Alt</value>
+  </data>
+  <data name="Settings_Backdrop_Acrylic.Content" xml:space="preserve">
+    <value>Acrílico</value>
+  </data>
+  <data name="Settings_Backdrop_Solid.Content" xml:space="preserve">
+    <value>Color sólido (Ninguno)</value>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="Settings_DevelopedBy.Text" xml:space="preserve">
+    <value>Desarrollado por SodaLabs</value>
+  </data>
+  <data name="Settings_SourceCode.Content" xml:space="preserve">
+    <value>Ver código fuente en GitHub</value>
+  </data>
+  <data name="Settings_RestartRequired_Title" xml:space="preserve">
+    <value>Reinicio necesario</value>
+  </data>
+  <data name="Settings_RestartRequired_Message" xml:space="preserve">
+    <value>Los cambios de idioma se aplicarán la próxima vez que inicies la aplicación.</value>
+  </data>
+  <data name="GridSizeSwitcher_Large.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cuadrícula Grande</value>
+  </data>
+  <data name="GridSizeSwitcher_Medium.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cuadrícula Mediana</value>
+  </data>
+  <data name="GridSizeSwitcher_Small.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cuadrícula Pequeña</value>
+  </data>
+  <data name="CodeView_Xaml.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mostrar fragmentos de código XAML</value>
+  </data>
+  <data name="CodeView_CSharp.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Mostrar fragmentos de código C#</value>
+  </data>
+  <data name="ThemeButton_Light_ToolTip" xml:space="preserve">
+    <value>Cambiar a tema oscuro</value>
+  </data>
+  <data name="ThemeButton_Dark_ToolTip" xml:space="preserve">
+    <value>Cambiar a tema claro</value>
+  </data>
+  <data name="IconCount_Text" xml:space="preserve">
+    <value>{0} iconos</value>
+    <comment>{0} is the number of icons</comment>
+  </data>
+  <data name="SidePanel_GlyphCodeHeader_Text" xml:space="preserve">
+    <value>Código Glyph</value>
+  </data>
+  <data name="SelectorBar_All.Text" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="SelectorBar_Regular.Text" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SelectorBar_Filled.Text" xml:space="preserve">
+    <value>Relleno</value>
+  </data>
+  <data name="SelectorBar_Light.Text" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="SelectorBar_Resizable.Text" xml:space="preserve">
+    <value>Redimensionable</value>
+  </data>
+  <data name="SelectorBar_Favorites.Text" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="Toolbar_Filters_Button.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Filtrar iconos</value>
+  </data>
+  <data name="Toolbar_Filters_Text.Text" xml:space="preserve">
+    <value>Filtros</value>
+  </data>
+  <data name="Toolbar_Filters_Title.Text" xml:space="preserve">
+    <value>Filtros del catálogo</value>
+  </data>
+  <data name="Toolbar_Filters_CategoryLabel.Text" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="Toolbar_Filters_SizeLabel.Text" xml:space="preserve">
+    <value>Tamaño</value>
+  </data>
+  <data name="Toolbar_Filters_ResetButton.Content" xml:space="preserve">
+    <value>Restablecer filtros</value>
+  </data>
+  <data name="Toolbar_Design_Button.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Diseño de cuadrícula</value>
+  </data>
+  <data name="Toolbar_Design_ButtonText.Text" xml:space="preserve">
+    <value>Diseño</value>
+  </data>
+  <data name="Toolbar_Design_Title.Text" xml:space="preserve">
+    <value>Diseño de cuadrícula</value>
+  </data>
+  <data name="SidePanel_ContextPreview_Header.Text" xml:space="preserve">
+    <value>Vista Previa de Contexto UI</value>
+  </data>
+  <data name="SidePanel_ContextPreview_PrimaryAction.Text" xml:space="preserve">
+    <value>Acción Primaria</value>
+  </data>
+  <data name="SidePanel_ContextPreview_MenuItem.Text" xml:space="preserve">
+    <value>Elemento de Menú</value>
+  </data>
+  <data name="SidePanel_Svg_Header.Text" xml:space="preserve">
+    <value>Código SVG Vectorial (Win2D)</value>
+  </data>
+  <data name="Category_All" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="Category_Navigation" xml:space="preserve">
+    <value>Navegación</value>
+  </data>
+  <data name="Category_Multimedia" xml:space="preserve">
+    <value>Multimedia</value>
+  </data>
+  <data name="Category_Communication" xml:space="preserve">
+    <value>Comunicación</value>
+  </data>
+  <data name="Category_Documents" xml:space="preserve">
+    <value>Documentos y Archivos</value>
+  </data>
+  <data name="Category_System" xml:space="preserve">
+    <value>Sistema y Hardware</value>
+  </data>
+  <data name="Category_Users" xml:space="preserve">
+    <value>Usuarios y Personas</value>
+  </data>
+  <data name="Category_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SidePanel_Favorite_Add" xml:space="preserve">
+    <value>Agregar a Favoritos</value>
+  </data>
+  <data name="SidePanel_Favorite_Remove" xml:space="preserve">
+    <value>Quitar de Favoritos</value>
+  </data>
+  <data name="SidePanel_Copy_Svg_Tooltip" xml:space="preserve">
+    <value>Copiar como SVG</value>
+  </data>
+  <data name="Export_Error_Title" xml:space="preserve">
+    <value>Error de Exportación</value>
+  </data>
+  <data name="Export_Error_Message" xml:space="preserve">
+    <value>No se pudo exportar el archivo SVG: {0}</value>
+  </data>
+  <data name="NoResults_Text" xml:space="preserve">
+    <value>No hay resultados para "{0}"</value>
+  </data>
+  <data name="NoFavorites_Title.Text" xml:space="preserve">
+    <value>Aún no hay favoritos</value>
+  </data>
+  <data name="NoFavorites_Description.Text" xml:space="preserve">
+    <value>Marca iconos como favoritos haciendo clic en el icono de estrella en el panel lateral.</value>
+  </data>
+  <data name="ContextMenu_Favorite_Add" xml:space="preserve">
+    <value>Agregar a favoritos</value>
+  </data>
+  <data name="ContextMenu_Favorite_Remove" xml:space="preserve">
+    <value>Quitar de favoritos</value>
+  </data>
+</root>

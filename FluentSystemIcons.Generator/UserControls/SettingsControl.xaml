@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="FluentSystemIcons.Generator.UserControls.SettingsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Spacing="12" MinWidth="250" Padding="4">
+        <!-- Sección de Apariencia -->
+        <TextBlock x:Name="AppearanceTitleTextBlock"
+                   x:Uid="Settings_Appearance" 
+                   Text="Apariencia"
+                   Style="{StaticResource SubtitleTextBlockStyle}" 
+                   Margin="0,0,0,4"/>
+
+        <RadioButtons x:Name="ThemeRadioButtons" 
+                      x:Uid="Settings_ThemeHeader" 
+                      Header="Tema de la aplicación"
+                      SelectionChanged="ThemeRadioButtons_SelectionChanged">
+            <RadioButton x:Uid="Settings_Theme_Light" Content="Claro" Tag="Light"/>
+            <RadioButton x:Uid="Settings_Theme_Dark" Content="Oscuro" Tag="Dark"/>
+            <RadioButton x:Uid="Settings_Theme_System" Content="Predeterminado del sistema" Tag="Default"/>
+        </RadioButtons>
+
+        <!-- Selección de Material de Fondo -->
+        <ComboBox x:Name="BackdropComboBox" 
+                  x:Uid="Settings_BackdropHeader" 
+                  Header="Fondo de ventana"
+                  IsEnabled="True" 
+                  HorizontalAlignment="Stretch"
+                  SelectionChanged="BackdropComboBox_SelectionChanged">
+            <ComboBoxItem x:Uid="Settings_Backdrop_Mica" Content="Mica" Tag="Mica"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_MicaAlt" Content="Mica Alt" Tag="MicaAlt"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_Acrylic" Content="Acrílico" Tag="Acrylic"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_Solid" Content="Sólido" Tag="None"/>
+        </ComboBox>
+
+        <!-- Selección de Idioma -->
+        <ComboBox x:Name="LanguageComboBox" 
+                  x:Uid="Settings_LanguageHeader" 
+                  Header="Idioma"
+                  HorizontalAlignment="Stretch"
+                  SelectionChanged="LanguageComboBox_SelectionChanged">
+            <ComboBoxItem x:Uid="Settings_Language_System" Content="Predeterminado del sistema" Tag="System"/>
+            <ComboBoxItem Content="English" Tag="en-US"/>
+            <ComboBoxItem Content="Español" Tag="es-ES"/>
+        </ComboBox>
+
+        <Border Height="1" Background="{ThemeResource CardStrokeColorDefaultBrush}" Margin="0,12"/>
+
+        <!-- Sección Acerca de -->
+        <TextBlock x:Name="AboutTitleTextBlock"
+                   x:Uid="Settings_About" 
+                   Text="Acerca de"
+                   Style="{StaticResource SubtitleTextBlockStyle}" 
+                   Margin="0,4,0,4"/>
+
+        <StackPanel Spacing="4">
+            <!-- Nombre de la App y Versión -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Uid="AppTitle" Text="Generador de Fluent System Icons" VerticalAlignment="Center" FontWeight="Medium"/>
+                <TextBlock x:Name="AppVersionTextBlock" Grid.Column="1" Foreground="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Crédito del Desarrollador -->
+            <TextBlock x:Name="DevelopedByTextBlock"
+                       x:Uid="Settings_DevelopedBy" 
+                       Text="Desarrollado por MonteElias"
+                       FontSize="12" 
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+        </StackPanel>
+
+        <HyperlinkButton x:Name="SourceCodeHyperlinkButton"
+                         x:Uid="Settings_SourceCode" 
+                         Content="Código fuente en GitHub"
+                         NavigateUri="https://github.com/MonteElias/FluentSystemIcons"/>
+    </StackPanel>
+</UserControl>

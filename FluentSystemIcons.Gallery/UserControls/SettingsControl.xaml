@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UserControls/SettingsControl.xaml -->
+<UserControl
+    x:Class="FluentSystemIcons.Gallery.UserControls.SettingsControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- El StackPanel que antes estaba en el Flyout ahora es el contenido principal aquí -->
+    <StackPanel Spacing="12" MinWidth="250" Padding="4">
+        <TextBlock x:Uid="Settings_Appearance" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,0,0,4"/>
+        <RadioButtons x:Name="ThemeRadioButtons" x:Uid="Settings_ThemeHeader"  SelectionChanged="ThemeRadioButtons_SelectionChanged">
+            <RadioButton x:Uid="Settings_Theme_Light" Tag="Light"/>
+            <RadioButton x:Uid="Settings_Theme_Dark" Tag="Dark"/>
+            <RadioButton x:Uid="Settings_Theme_System" Tag="Default"/>
+        </RadioButtons>
+
+        <!-- CAMBIOS: Habilitar y configurar el ComboBox -->
+        <ComboBox x:Name="BackdropComboBox" 
+          x:Uid="Settings_BackdropHeader" 
+          IsEnabled="True" 
+          SelectionChanged="BackdropComboBox_SelectionChanged">
+            <ComboBoxItem x:Uid="Settings_Backdrop_Mica" Tag="Mica"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_MicaAlt" Tag="MicaAlt"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_Acrylic" Tag="Acrylic"/>
+            <ComboBoxItem x:Uid="Settings_Backdrop_Solid" Tag="None"/>
+        </ComboBox>
+
+        <!-- Idioma de la aplicacion -->
+        <ComboBox x:Name="LanguageComboBox" x:Uid="Settings_LanguageHeader" SelectionChanged="LanguageComboBox_SelectionChanged">
+            <ComboBoxItem x:Uid="Settings_Language_System" Tag="System"/>
+            <ComboBoxItem Content="English" Tag="en-US"/>
+            <ComboBoxItem Content="Español" Tag="es-ES"/>
+        </ComboBox>
+
+        <Border Height="1" Background="{ThemeResource CardStrokeColorDefaultBrush}" Margin="0,12"/>
+
+        <TextBlock x:Uid="Settings_About" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,4,0,4"/>
+        <StackPanel Spacing="4">
+            <!-- Fila 1: Nombre de la App y Versión -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Uid="AppTitle" VerticalAlignment="Center"/>
+                <TextBlock x:Name="AppVersionTextBlock" Grid.Column="1" Foreground="{ThemeResource TextFillColorSecondaryBrush}" VerticalAlignment="Center"/>
+            </Grid>
+
+            <!-- Fila 2: Crédito del Desarrollador -->
+            <TextBlock x:Uid="Settings_DevelopedBy" 
+                       FontSize="12" 
+                       Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+        </StackPanel>
+
+        <HyperlinkButton x:Uid="Settings_SourceCode" NavigateUri="https://github.com/MonteElias/FluentSystemIcons"/>
+    </StackPanel>
+</UserControl>

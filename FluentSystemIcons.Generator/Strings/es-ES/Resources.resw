@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_Appearance.Text" xml:space="preserve">
+    <value>Apariencia</value>
+  </data>
+  <data name="Settings_ThemeHeader.Header" xml:space="preserve">
+    <value>Tema de la aplicación</value>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>Oscuro</value>
+  </data>
+  <data name="Settings_Theme_System.Content" xml:space="preserve">
+    <value>Predeterminado del sistema</value>
+  </data>
+  <data name="Settings_BackdropHeader.Header" xml:space="preserve">
+    <value>Fondo de ventana</value>
+  </data>
+  <data name="Settings_Backdrop_Mica.Content" xml:space="preserve">
+    <value>Mica</value>
+  </data>
+  <data name="Settings_Backdrop_MicaAlt.Content" xml:space="preserve">
+    <value>Mica Alt</value>
+  </data>
+  <data name="Settings_Backdrop_Acrylic.Content" xml:space="preserve">
+    <value>Acrílico</value>
+  </data>
+  <data name="Settings_Backdrop_Solid.Content" xml:space="preserve">
+    <value>Sólido</value>
+  </data>
+  <data name="Settings_LanguageHeader.Header" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Settings_Language_System.Content" xml:space="preserve">
+    <value>Predeterminado del sistema</value>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="AppTitle.Text" xml:space="preserve">
+    <value>Generador de Fluent System Icons</value>
+  </data>
+  <data name="Settings_DevelopedBy.Text" xml:space="preserve">
+    <value>Desarrollado por SodaLabs</value>
+  </data>
+  <data name="Settings_SourceCode.Content" xml:space="preserve">
+    <value>Código fuente en GitHub</value>
+  </data>
+  <data name="MainWindow_Title" xml:space="preserve">
+    <value>Fluent System Icons - Generador del SDK</value>
+  </data>
+  <data name="AppTitleBar_Title.Text" xml:space="preserve">
+    <value>Fluent System Icons</value>
+  </data>
+  <data name="AppTitleBar_Subtitle.Text" xml:space="preserve">
+    <value>Generador del SDK</value>
+  </data>
+  <data name="ThemeButton_Light_ToolTip" xml:space="preserve">
+    <value>Cambiar a Tema Oscuro</value>
+  </data>
+  <data name="ThemeButton_Dark_ToolTip" xml:space="preserve">
+    <value>Cambiar a Tema Claro</value>
+  </data>
+  <data name="Card_Paths_Title.Text" xml:space="preserve">
+    <value>Rutas del Proyecto</value>
+  </data>
+  <data name="Card_Paths_WinUIPathLabel.Text" xml:space="preserve">
+    <value>Directorio de FluentSystemIcons.WinUI</value>
+  </data>
+  <data name="WinUIPathTextBox.PlaceholderText" xml:space="preserve">
+    <value>Seleccione la carpeta del proyecto WinUI 3...</value>
+  </data>
+  <data name="Card_Paths_WinUIPathDesc.Text" xml:space="preserve">
+    <value>Estructura donde se generarán las fuentes (.ttf) y constantes (.cs).</value>
+  </data>
+  <data name="Card_BuildParams_Title.Text" xml:space="preserve">
+    <value>Parámetros de Compilación</value>
+  </data>
+  <data name="Card_BuildParams_NamespaceLabel.Text" xml:space="preserve">
+    <value>Namespace C# de Salida</value>
+  </data>
+  <data name="NamespaceTextBox.PlaceholderText" xml:space="preserve">
+    <value>Escriba el espacio de nombres...</value>
+  </data>
+  <data name="Card_BuildParams_StylesLabel.Text" xml:space="preserve">
+    <value>Estilos Iconográficos a Sincronizar</value>
+  </data>
+  <data name="CheckBox_Regular.Content" xml:space="preserve">
+    <value>Regular (Esquema)</value>
+  </data>
+  <data name="CheckBox_Filled.Content" xml:space="preserve">
+    <value>Filled (Relleno)</value>
+  </data>
+  <data name="CheckBox_Light.Content" xml:space="preserve">
+    <value>Light (Fino)</value>
+  </data>
+  <data name="CheckBox_Resizable.Content" xml:space="preserve">
+    <value>Resizable (Dinámico)</value>
+  </data>
+  <data name="Card_NuGet_Title.Text" xml:space="preserve">
+    <value>Empaquetado NuGet Autónomo</value>
+  </data>
+  <data name="CheckBox_PackNuGet.Content" xml:space="preserve">
+    <value>Generar paquete NuGet (.nupkg) al finalizar</value>
+  </data>
+  <data name="Card_NuGet_VersionLabel.Text" xml:space="preserve">
+    <value>Versión del paquete NuGet</value>
+  </data>
+  <data name="CheckBox_UseCatalogVersion.Content" xml:space="preserve">
+    <value>Sincronizar con GitHub</value>
+  </data>
+  <data name="Card_NuGet_FolderLabel.Text" xml:space="preserve">
+    <value>Carpeta de Destino de Paquetes NuGet (.nupkg)</value>
+  </data>
+  <data name="NuGetOutputPathTextBox.PlaceholderText" xml:space="preserve">
+    <value>Seleccione la carpeta de salida del paquete...</value>
+  </data>
+  <data name="Card_VersionControl_Title.Text" xml:space="preserve">
+    <value>Control de Versiones del Catálogo</value>
+  </data>
+  <data name="Label_LocalVersion.Text" xml:space="preserve">
+    <value>Versión local instalada</value>
+  </data>
+  <data name="Label_GitHubVersion.Text" xml:space="preserve">
+    <value>Última versión en GitHub</value>
+  </data>
+  <data name="Card_DirectSync_Title.Text" xml:space="preserve">
+    <value>Sincronización Directa</value>
+  </data>
+  <data name="Card_DirectSync_Description.Text" xml:space="preserve">
+    <value>Esta función descarga las fuentes .ttf y estilos .css actualizados directamente desde el repositorio original de Microsoft en GitHub de manera totalmente automatizada.</value>
+  </data>
+  <data name="CheckBox_AutoDownload.Content" xml:space="preserve">
+    <value>Sincronizar recursos desde GitHub</value>
+  </data>
+  <data name="VerifyVersionButton.Content" xml:space="preserve">
+    <value>Verificar versión</value>
+  </data>
+  <data name="Console_Title.Text" xml:space="preserve">
+    <value>Consola de Diagnóstico</value>
+  </data>
+  <data name="Console_CopyButton_Text.Text" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="Console_ClearButton_Text.Text" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="Log_WinUIPathDetected" xml:space="preserve">
+    <value>[Info] Ruta de proyecto WinUI detectada automáticamente: {0}</value>
+  </data>
+  <data name="Log_WinUIPathWarning" xml:space="preserve">
+    <value>[Advertencia] No se pudo encontrar el proyecto FluentSystemIcons.WinUI automáticamente. Selecciónelo de forma manual.</value>
+  </data>
+  <data name="Log_DestPathUpdated" xml:space="preserve">
+    <value>[Info] Ruta de destino actualizada: {0}</value>
+  </data>
+  <data name="Log_NuGetPathUpdated" xml:space="preserve">
+    <value>[Info] Ruta del paquete NuGet actualizada: {0}</value>
+  </data>
+  <data name="Log_ErrorWinUIPathEmpty" xml:space="preserve">
+    <value>[Error] La ruta de proyecto WinUI especificada no puede estar vacía.</value>
+  </data>
+  <data name="Log_ErrorNamespaceEmpty" xml:space="preserve">
+    <value>[Error] El nombre del Namespace no puede estar vacío.</value>
+  </data>
+  <data name="Log_ErrorNuGetPathEmpty" xml:space="preserve">
+    <value>[Error] Debe especificar una ruta de salida válida para el paquete NuGet.</value>
+  </data>
+  <data name="Log_StartSync" xml:space="preserve">
+    <value>🚀 Iniciando proceso de compilación y sincronización de Fluent System Icons...</value>
+  </data>
+  <data name="Log_RecreatingCsproj" xml:space="preserve">
+    <value>[Info] El proyecto de biblioteca FluentSystemIcons.WinUI.csproj no existe en la ruta seleccionada. Recreándolo de forma autónoma...</value>
+  </data>
+  <data name="Log_CsprojRecreated" xml:space="preserve">
+    <value>[XAML] Estructura de proyecto y archivo FluentSystemIcons.WinUI.csproj restablecidos con éxito.</value>
+  </data>
+  <data name="Log_DownloadingCss" xml:space="preserve">
+    <value>[GitHub] Descargando {0}...</value>
+  </data>
+  <data name="Progress_DownloadingCss" xml:space="preserve">
+    <value>Descargando {0}...</value>
+  </data>
+  <data name="Log_DownloadingTtf" xml:space="preserve">
+    <value>[GitHub] Descargando {0}...</value>
+  </data>
+  <data name="Progress_DownloadingTtf" xml:space="preserve">
+    <value>Descargando {0}...</value>
+  </data>
+  <data name="Log_GitHubDownloadDisabled" xml:space="preserve">
+    <value>[Info] Descarga por GitHub desactivada. Buscando archivos locales .css en el directorio actual...</value>
+  </data>
+  <data name="Log_ErrorNoCssFound" xml:space="preserve">
+    <value>[Error] No se encontraron archivos de hojas de estilo .css para procesar.</value>
+  </data>
+  <data name="Progress_AnalyzingCss" xml:space="preserve">
+    <value>Analizando hojas de estilo y generando clases constantes C#...</value>
+  </data>
+  <data name="Log_ProcessingResizable" xml:space="preserve">
+    <value>[Procesando] Sincronizando estilo dinámico: {0}</value>
+  </data>
+  <data name="Log_ProcessingRegular" xml:space="preserve">
+    <value>[Procesando] Sincronizando estilo Regular: {0}</value>
+  </data>
+  <data name="Log_ProcessingFilled" xml:space="preserve">
+    <value>[Procesando] Sincronizando estilo Filled: {0}</value>
+  </data>
+  <data name="Log_ProcessingLight" xml:space="preserve">
+    <value>[Procesando] Sincronizando estilo Light: {0}</value>
+  </data>
+  <data name="Progress_SyncingTtf" xml:space="preserve">
+    <value>Sincronizando fuentes vectoriales TrueType (.ttf)...</value>
+  </data>
+  <data name="Log_TtfMoved" xml:space="preserve">
+    <value>[Sincronizado] Fuente movida con éxito: {0}</value>
+  </data>
+  <data name="Progress_UpdatingXaml" xml:space="preserve">
+    <value>Actualizando diccionario de recursos XAML (FluentIcons.xaml)...</value>
+  </data>
+  <data name="Log_XamlUpdated" xml:space="preserve">
+    <value>[XAML] Diccionario de Recursos FluentIcons.xaml reconstruido y sincronizado con éxito.</value>
+  </data>
+  <data name="Log_NuGetStart" xml:space="preserve">
+    <value>
+[NuGet] Iniciando empaquetado automático de FluentSystemIcons.WinUI...</value>
+  </data>
+  <data name="Progress_PackingNuGet" xml:space="preserve">
+    <value>Compilando y generando paquete NuGet (.nupkg) en segundo plano...</value>
+  </data>
+  <data name="Log_ErrorNoCsproj" xml:space="preserve">
+    <value>[Error] No se encontró el archivo de proyecto en la ruta absoluta especificada: '{0}'. Verifique la ruta.</value>
+  </data>
+  <data name="Log_NuGetSuccess" xml:space="preserve">
+    <value>[NuGet] ¡Empaquetado exitoso! El paquete .nupkg (v{0}) está disponible en: {1}</value>
+  </data>
+  <data name="Log_DotnetPackFailed" xml:space="preserve">
+    <value>[Error] El comando 'dotnet pack' falló con código de salida: {0}</value>
+  </data>
+  <data name="Log_DotnetException" xml:space="preserve">
+    <value>[Error NuGet] Falló la ejecución del empaquetado dotnet: {0}</value>
+  </data>
+  <data name="Log_ClassGenerated" xml:space="preserve">
+    <value>   ✅ Generada clase {0}.cs con {1} iconos.</value>
+  </data>
+  <data name="Log_NoIconsForStyle" xml:space="preserve">
+    <value>   ⚠️ No se encontraron iconos para el estilo '{0}' en {1}.</value>
+  </data>
+  <data name="Log_NoIconsForResizableStyle" xml:space="preserve">
+    <value>   ⚠️ No se encontraron iconos para el estilo '{0}' en el archivo Resizable.</value>
+  </data>
+  <data name="Status_CatalogUpToDate_Title" xml:space="preserve">
+    <value>Catálogo al día</value>
+  </data>
+  <data name="Status_CatalogUpToDate_Message" xml:space="preserve">
+    <value>Su catálogo local ha sido sincronizado, compilado y empaquetado en la versión {0}.</value>
+  </data>
+  <data name="Status_GenCompleted_Title" xml:space="preserve">
+    <value>Generación completada</value>
+  </data>
+  <data name="Status_GenCompleted_Message" xml:space="preserve">
+    <value>Los recursos locales se han generado y empaquetado correctamente para la versión {0}.</value>
+  </data>
+  <data name="Status_PackError_Title" xml:space="preserve">
+    <value>Error de Empaquetado</value>
+  </data>
+  <data name="Status_PackError_Message" xml:space="preserve">
+    <value>Los recursos fueron generados, pero falló la compilación del paquete NuGet. Revise la consola.</value>
+  </data>
+  <data name="Progress_Completed" xml:space="preserve">
+    <value>¡Operación completada!</value>
+  </data>
+  <data name="Log_SuccessFull" xml:space="preserve">
+    <value>
+✅✅✅ Generación y Sincronización finalizada con éxito. ✅✅✅</value>
+  </data>
+  <data name="Log_SuccessIndexed" xml:space="preserve">
+    <value>[Info] Los archivos .ttf y las clases estáticas .cs se encuentran indexadas en su proyecto de biblioteca.</value>
+  </data>
+  <data name="Log_CriticalError" xml:space="preserve">
+    <value>[Error Crítico] Ocurrió una anomalía durante la sincronización: {0}</value>
+  </data>
+  <data name="Status_Checking_Message" xml:space="preserve">
+    <value>Comprobando última versión en el repositorio de Microsoft...</value>
+  </data>
+  <data name="Log_ErrorCheckVersion" xml:space="preserve">
+    <value>[Error] No se pudo comprobar la versión de iconos desde GitHub: {0}</value>
+  </data>
+  <data name="Status_ConnectionError" xml:space="preserve">
+    <value>Error de conexión</value>
+  </data>
+  <data name="Status_ConnectionError_Message" xml:space="preserve">
+    <value>No se pudo conectar con el servidor para verificar actualizaciones.</value>
+  </data>
+  <data name="Status_UpdateAvailable_Title" xml:space="preserve">
+    <value>Actualización disponible de iconos</value>
+  </data>
+  <data name="Status_UpdateAvailable_Message" xml:space="preserve">
+    <value>Su versión local es la versión {0}, pero la versión {1} está disponible en GitHub de Microsoft.</value>
+  </data>
+  <data name="Status_AlreadyUpToDate_Title" xml:space="preserve">
+    <value>Catálogo de iconos al día</value>
+  </data>
+  <data name="Status_AlreadyUpToDate_Message" xml:space="preserve">
+    <value>Su catálogo local está completamente actualizado en la versión {0}.</value>
+  </data>
+  <data name="Status_Initial_Title" xml:space="preserve">
+    <value>Información del Catálogo</value>
+  </data>
+  <data name="Status_Initial_Message" xml:space="preserve">
+    <value>Versión local instalada: {0}. Presione 'Verificar versión' para comprobar si hay actualizaciones.</value>
+  </data>
+  <data name="Button_UpdatePack" xml:space="preserve">
+    <value>Actualizar, Generar y Compilar</value>
+  </data>
+  <data name="Button_UpdateGen" xml:space="preserve">
+    <value>Actualizar y generar</value>
+  </data>
+  <data name="Button_Pack" xml:space="preserve">
+    <value>Generar y Compilar</value>
+  </data>
+  <data name="Button_Gen" xml:space="preserve">
+    <value>Generar Recursos</value>
+  </data>
+  <data name="Log_CopiedToClipboard" xml:space="preserve">
+    <value>[Info] Registro de consola copiado al portapapeles.</value>
+  </data>
+  <data name="Log_ErrorCopy" xml:space="preserve">
+    <value>[Error] No se pudo copiar al portapapeles: {0}</value>
+  </data>
+  <data name="Settings_RestartRequired_Title" xml:space="preserve">
+    <value>Reinicio Requerido</value>
+  </data>
+  <data name="Settings_RestartRequired_Message" xml:space="preserve">
+    <value>Por favor, reinicie la aplicación para aplicar el cambio de idioma.</value>
+  </data>
+</root>

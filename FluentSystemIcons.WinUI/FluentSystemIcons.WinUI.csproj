@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+		<RootNamespace>FluentSystemIcons.WinUI</RootNamespace>
+		<RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+		<UseWinUI>true</UseWinUI>
+		<Platforms>AnyCPU;x64;x86;ARM32;ARM64</Platforms>
+
+		<!-- Habilita la estructuración de carpetas de biblioteca recomendada para WinUI 3 -->
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>
+
+		<!-- Configuración para enlazar nuestro target personalizado durante la compilación del paquete NuGet -->
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);PackWinUIAssets</TargetsForTfmSpecificContentInPackage>
+	</PropertyGroup>
+
+	<!-- Remueve las declaraciones predeterminadas del explorador de soluciones para evitar conflictos -->
+	<ItemGroup>
+		<None Remove="Assets\Fonts\FluentSystemIcons-Filled.css" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Filled.json" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Filled.ttf" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Light.css" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Light.json" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Light.ttf" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Regular.css" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Regular.json" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Regular.ttf" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Resizable.css" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Resizable.json" />
+		<None Remove="Assets\Fonts\FluentSystemIcons-Resizable.ttf" />
+		<None Remove="Resources\FluentIcons.xaml" />
+	</ItemGroup>
+
+	<!-- Grupo consolidado: Declara los archivos y les asigna su propiedad de copia simultáneamente -->
+	<ItemGroup>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Filled.css" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Filled.css')">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Filled.json" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Filled.json')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Filled.ttf" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Filled.ttf')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Light.css" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Light.css')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Light.json" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Light.json')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Light.ttf" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Light.ttf')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Regular.css" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Regular.css')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Regular.json" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Regular.json')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Regular.ttf" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Regular.ttf')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Resizable.css" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Resizable.css')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Resizable.json" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Resizable.json')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Assets\Fonts\FluentSystemIcons-Resizable.ttf" Condition="Exists('Assets\\Fonts\\FluentSystemIcons-Resizable.ttf')">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.28000.1839" />
+		<PackageReference Include="Microsoft.WindowsAppSDK" Version="2.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Page Update="Resources\FluentIcons.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</Page>
+	</ItemGroup>
+
+	<!-- Target personalizado para empaquetar de forma estructurada los recursos dentro de lib -->
+	<Target Name="PackWinUIAssets">
+		<ItemGroup>
+			<!-- Incluye el archivo binario compilado de XAML (.xbf) desde la ruta de salida de compilación -->
+			<TfmSpecificPackageFile Include="$(OutputPath)\FluentSystemIcons.WinUI\Resources\FluentIcons.xbf">
+				<PackagePath>lib\net8.0-windows10.0.19041\FluentSystemIcons.WinUI\Resources\</PackagePath>
+			</TfmSpecificPackageFile>
+
+			<!-- Incluye todas las fuentes (.ttf), hojas de estilo (.css) y metadatos (.json) desde la carpeta del proyecto -->
+			<TfmSpecificPackageFile Include="Assets\Fonts\**\*.*">
+				<PackagePath>lib\net8.0-windows10.0.19041\FluentSystemIcons.WinUI\Assets\Fonts\</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
+
+</Project>

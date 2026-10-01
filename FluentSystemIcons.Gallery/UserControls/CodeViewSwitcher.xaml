@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="FluentSystemIcons.Gallery.UserControls.CodeViewSwitcher"
+    x:Name="RootControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:FluentSystemIcons.Gallery.Converters"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <converters:SelectedCodeViewToVisibilityConverter x:Key="SelectedToVisibilityConverter"/>
+        <converters:UnselectedCodeViewToVisibilityConverter x:Key="UnselectedToVisibilityConverter"/>
+
+        <Style x:Key="CodeViewSwitcherButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Stretch"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter Content="{TemplateBinding Content}" Padding="12,8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="PointerOver">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtleFillColorSecondaryBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SubtleFillColorTertiaryBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="SwitcherGrid" Height="40" Background="{ThemeResource SubtleFillColorTransparentBrush}" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1" CornerRadius="8" Padding="3" MinWidth="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="{ThemeResource AccentFillColorDefaultBrush}" CornerRadius="6">
+            <Border.RenderTransform>
+                <TranslateTransform x:Name="IndicatorTransform"/>
+            </Border.RenderTransform>
+        </Border>
+
+        <!-- Botón 1: XAML -->
+        <Button Grid.Column="0" x:Uid="CodeView_Xaml" Style="{StaticResource CodeViewSwitcherButtonStyle}" Click="OnViewButtonClicked" Tag="Xaml">
+            <Grid>
+                <ContentControl Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                                Visibility="{Binding CurrentViewMode, ElementName=RootControl, Converter={StaticResource UnselectedToVisibilityConverter}, ConverterParameter=Xaml}">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon FontFamily="{StaticResource FluentIconsRegular}" Glyph="&#xEFBA;" FontSize="18"/>
+                        <TextBlock Text="XAML" FontWeight="Normal"/>
+                    </StackPanel>
+                </ContentControl>
+
+                <ContentControl Foreground="White"
+                                Visibility="{Binding CurrentViewMode, ElementName=RootControl, Converter={StaticResource SelectedToVisibilityConverter}, ConverterParameter=Xaml}">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon FontFamily="{StaticResource FluentIconsRegular}" Glyph="&#xEFBA;" FontSize="18"/>
+                        <TextBlock Text="XAML" FontWeight="Normal"/>
+                    </StackPanel>
+                </ContentControl>
+            </Grid>
+        </Button>
+
+        <!-- Botón 2: C# -->
+        <Button Grid.Column="1" x:Uid="CodeView_CSharp" Style="{StaticResource CodeViewSwitcherButtonStyle}" Click="OnViewButtonClicked" Tag="CSharp">
+            <Grid>
+                <ContentControl Foreground="{ThemeResource TextFillColorPrimaryBrush}"
+                                Visibility="{Binding CurrentViewMode, ElementName=RootControl, Converter={StaticResource UnselectedToVisibilityConverter}, ConverterParameter=CSharp}">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon FontFamily="{StaticResource FluentIconsRegular}" Glyph="&#xF0C6;" FontSize="18"/>
+                        <TextBlock Text="C#" FontWeight="Normal"/>
+                    </StackPanel>
+                </ContentControl>
+
+                <ContentControl Foreground="White"
+                                Visibility="{Binding CurrentViewMode, ElementName=RootControl, Converter={StaticResource SelectedToVisibilityConverter}, ConverterParameter=CSharp}">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon FontFamily="{StaticResource FluentIconsRegular}" Glyph="&#xF0C6;" FontSize="18"/>
+                        <TextBlock Text="C#" FontWeight="Normal"/>
+                    </StackPanel>
+                </ContentControl>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>
